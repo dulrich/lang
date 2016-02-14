@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<title><%= title %></title>
+	
+	<link rel="stylesheet" href="//v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+		<div class="blog-masthead">
+			<div class="container">
+				<nav class="nav blog-nav">
+					<span class="nav-link ud-nav-logo">
+						<span style="color:#fff;">lang</span>
+					</span>
+					<a class="nav-link" data-path="about" href="/">about</a>
+					<a class="nav-link" data-path="login" href="/login">login</a>
+				</nav>
+			</div>
+		</div>
+		<div class="container lang-container-body"><%= content %></div>
+		<footer class="blog-footer">
+			<p>
+				&copy; 2016, David Ulrich
+				&ndash; view <a href="https://github.com/dulrich/lang">source</a> on github.
+			</p>
+		</footer>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var page_active;
+		
+		page_active = "#{page}";
+		
+		$(".nav-link[data-path='"+page_active+"']").addClass("active");
+	});
+	</script>
+</body>
+</html>

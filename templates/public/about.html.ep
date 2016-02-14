@@ -1,0 +1,13 @@
+% layout 'default';
+% title 'Lang | About';
+
+<h2><%= $msg; %></h2>
+<p>lang is a basic flashcard system. Features include:</p>
+
+<ul class="lang-list">
+	<li>translation in multiple representations (greek/cyrillic/hebrew/arabic/etc and transliteration)</li>
+	<li>login with email/password</li>
+	<li>create lists and flashcards</li>
+	<li>mark success/fail</li>
+	<li>select flat, random, or success-modified card frequency</li>
+</ul>

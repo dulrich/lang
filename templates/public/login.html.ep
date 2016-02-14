@@ -1,0 +1,5 @@
+% layout 'default';
+% title 'Lang | Login';
+<h2><%= $msg; %></h2>
+
+<p>STUB</p>
