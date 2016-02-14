@@ -9,8 +9,8 @@ BEGIN { unshift @INC, "$FindBin::Bin/../lib" }
 use JSON qw();
 my $JSON = JSON->new;
 my $config_json = do {
-	open(my $json_fh, "<:encoding(UTF-8)", "../config/config.json")
-		or die("Can't open config.json\": $!\n");
+	open(my $json_fh, "<:encoding(UTF-8)", "config/config.json")
+		or die("Can't open config/config.json\": $!\n");
 	local $/;
 	<$json_fh>
 };

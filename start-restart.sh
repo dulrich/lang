@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # lang: simple flashcard system
 # Copyright (C) 2016  David Ulrich (http://github.com/dulrich)
 # 
@@ -14,23 +16,14 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-package Lang::Public;
-use Mojo::Base 'Mojolicious::Controller';
+path=$(pwd)
+prgm=script/lang
 
-sub about {
-	my $self = shift;
-	
-	$self->render(
-		msg => 'about'
-	);
-}
+running=`forever list | grep "$path/$prgm"`
 
-sub login {
-	my $self = shift;
-	
-	$self->render(
-		msg => 'login or register'
-	);
-}
+cmd=restart
+if [ ${#running} == 0 ]; then
+	cmd=start
+fi
 
-1;
+forever $cmd -c perl $path/$prgm

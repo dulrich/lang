@@ -9,6 +9,9 @@
 	
 	<link rel="stylesheet" href="//v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,8 +34,6 @@
 			</p>
 		</footer>
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
 		var page_active;

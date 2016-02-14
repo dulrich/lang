@@ -1,5 +1,60 @@
 % layout 'default';
 % title 'Lang | Login';
+
 <h2><%= $msg; %></h2>
 
-<p>STUB</p>
+<div class="lang-form-login">
+	<span>
+		<input type="text"
+			class="form-control"
+			id="lang-field-login-email"
+			placeholder="your@email.address" />
+		<input type="password"
+			class="form-control"
+			id="lang-field-login-password"
+			placeholder="password" />
+	</span>
+	<span>
+		<button class="btn btn-primary lang-btn-login">login</button>
+		or <a href="#" class="lang-link-register">register</a>.
+	</span>
+</div>
+
+<div class="lang-form-register hidden">
+	<span>
+		<input type="text"
+			class="form-control"
+			id="lang-field-register-name"
+			placeholder="your name" />
+		<input type="text"
+			class="form-control"
+			id="lang-field-register-email"
+			placeholder="your@email.address" />
+		<input type="text"
+			class="form-control"
+			id="lang-field-register-email-confirm"
+			placeholder="confirm your@email.address" />
+		<input type="password"
+			class="form-control"
+			id="lang-field-register-password"
+			placeholder="password" />
+		<input type="password"
+			class="form-control"
+			id="lang-field-register-password-confirm"
+			placeholder="confirm password" />
+	</span>
+	<span>
+		<button class="btn btn-primary lang-btn-register">register</button>
+		already have an account? <a href="#" class="lang-link-login">login</a>.
+	</span>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".lang-link-login,.lang-link-register").click(function(e) {
+		e.preventDefault();
+		
+		$(".lang-form-login,.lang-form-register").toggleClass("hidden");
+	});
+});
+</script>

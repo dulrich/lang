@@ -11,13 +11,15 @@ Basic flashcard system
 # installation
 
 On ubuntu:
-* `sudo apt-get install libmojolicious-perl`
+* `sudo apt-get install libmojolicious-perl libjson-perl`
 * `cp config/config.example.json config/config.json` and set your values
-* run in scripts `./lang`
+* run `perl script/lang` directly
+* or `make dev` or `make prod` depending on your environment (requires `nodemon` or `forever` daemonizer)
+
 
 # license
 
-Copyright (C) 2014 - 2015  David Ulrich (http://github.com/dulrich)
+lang is Copyright (C) 2016  David Ulrich (http://github.com/dulrich)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as

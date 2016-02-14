@@ -172,6 +172,10 @@ h6, .h6 {
 
 /* ulrichdev styles */
 
+.hidden {
+	display: none;
+}
+
 .lang-container-body {
 	min-height: 75vh;
 }
