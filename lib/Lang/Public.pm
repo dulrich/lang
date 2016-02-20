@@ -21,7 +21,8 @@ sub about {
 	my $self = shift;
 	
 	$self->render(
-		msg => 'about'
+		auth => $self->stash('auth') || 0,
+		msg  => 'about'
 	);
 }
 
@@ -29,7 +30,19 @@ sub login {
 	my $self = shift;
 	
 	$self->render(
-		msg => 'login or register'
+		auth => $self->stash('auth') || 0,
+		msg  => 'login or register'
+	);
+}
+
+sub unknown {
+	my $self = shift;
+	my $path = $self->stash('path');
+	
+	$self->render(
+		auth   => $self->stash('auth') || 0,
+		msg    => "$path: 404 Page Not Found",
+		status => 404
 	);
 }
 

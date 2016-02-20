@@ -26,7 +26,7 @@ sub startup {
 	my $r = $self->routes;
 	
 	my $static = $self->static;
-	push @{$static->paths} => $main::config{"basepath"} . '/static';
+	push @{$static->paths} => $main::config{'basepath'} . '/static';
 	
 	# Normal route to controller
 	$r->get('/')->to(
@@ -37,6 +37,11 @@ sub startup {
 	$r->get('/login')->to(
 		controller => 'Public',
 		action     => 'login'
+	);
+	
+	$r->any('/:path')->to(
+		controller => 'Public',
+		action     => 'unknown'
 	);
 }
 
